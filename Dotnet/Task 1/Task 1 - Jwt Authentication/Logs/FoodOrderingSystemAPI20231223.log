@@ -1,0 +1,104 @@
+2023-12-23 10:43:18.302 +05:30 [INF] User profile is available. Using 'C:\Users\Arularasi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-23 10:43:18.536 +05:30 [INF] Now listening on: http://localhost:5038
+2023-12-23 10:43:18.543 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-23 10:43:18.543 +05:30 [INF] Hosting environment: Development
+2023-12-23 10:43:18.543 +05:30 [INF] Content root path: C:\Users\Arularasi\Google Drive\MY FILES\Aspire Systems\Angular\Code\Application\Asp.Net Web API\FoodOrderingSystemAPI
+2023-12-23 10:43:22.537 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/index.html - -
+2023-12-23 10:43:23.277 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/index.html - - - 200 - text/html;charset=utf-8 753.1612ms
+2023-12-23 10:43:23.454 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/_framework/aspnetcore-browser-refresh.js - -
+2023-12-23 10:43:23.460 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 6.4605ms
+2023-12-23 10:43:24.028 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - -
+2023-12-23 10:43:25.585 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1556.4243ms
+2023-12-23 10:43:59.048 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Signup - -
+2023-12-23 10:44:00.528 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-12-23 10:44:00.789 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:44:00.795 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Signup - - - 204 - - 1747.2453ms
+2023-12-23 10:44:00.799 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/Account/Signup application/json 144
+2023-12-23 10:44:00.815 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:44:00.821 +05:30 [INF] Executing endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Signup (FoodOrderingSystemAPI)'
+2023-12-23 10:44:01.012 +05:30 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(FoodOrderingSystemAPI.Models.SignupLogin) on controller FoodOrderingSystemAPI.Controllers.AccountController (FoodOrderingSystemAPI).
+2023-12-23 10:44:02.305 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-23 10:44:02.361 +05:30 [INF] Executed action FoodOrderingSystemAPI.Controllers.AccountController.Signup (FoodOrderingSystemAPI) in 1324.7222ms
+2023-12-23 10:44:02.367 +05:30 [INF] Executed endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Signup (FoodOrderingSystemAPI)'
+2023-12-23 10:44:02.385 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/Account/Signup application/json 144 - 400 - application/problem+json;+charset=utf-8 1585.7663ms
+2023-12-23 10:44:02.388 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/logs - -
+2023-12-23 10:44:02.394 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:44:02.395 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/logs - - - 204 - - 7.0916ms
+2023-12-23 10:44:02.397 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/logs application/json 677
+2023-12-23 10:44:02.398 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:44:02.398 +05:30 [INF] Executing endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-23 10:44:02.403 +05:30 [INF] Route matched with {action = "LogMessage", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogMessage(FoodOrderingSystemAPI.Models.LogModel) on controller LogsController (FoodOrderingSystemAPI).
+2023-12-23 10:44:02.437 +05:30 [ERR] LogMessage: Signup failed. Please try again., Severity: Error
+Error: {"headers":{"normalizedNames":{},"lazyUpdate":null},"status":400,"statusText":"Bad Request","url":"http://localhost:5038/api/Account/Signup","ok":false,"name":"HttpErrorResponse","message":"Http failure response for http://localhost:5038/api/Account/Signup: 400 Bad Request","error":{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-2a60303f73e0a7fb6f795a1618869e20-3d2be8ecdd82adeb-00","errors":{"confirmPassword":["Could not find a property named Password."]}}}
+2023-12-23 10:44:02.443 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-23 10:44:02.443 +05:30 [INF] Executed action LogsController.LogMessage (FoodOrderingSystemAPI) in 40.3234ms
+2023-12-23 10:44:02.444 +05:30 [INF] Executed endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-23 10:44:02.444 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/logs application/json 677 - 200 0 - 46.6366ms
+2023-12-23 10:44:58.562 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/cart - -
+2023-12-23 10:44:58.563 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:44:58.564 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/cart - - - 204 - - 2.0032ms
+2023-12-23 10:44:58.709 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/api/cart - -
+2023-12-23 10:44:59.459 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:44:59.460 +05:30 [INF] Executing endpoint 'OrderCartServiceAPI.Controllers.CartController.GetCartItems (FoodOrderingSystemAPI)'
+2023-12-23 10:44:59.462 +05:30 [INF] Route matched with {action = "GetCartItems", controller = "Cart"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[FoodOrderingSystemAPI.Models.Cart]] GetCartItems() on controller OrderCartServiceAPI.Controllers.CartController (FoodOrderingSystemAPI).
+2023-12-23 10:44:59.649 +05:30 [ERR] Authenticated
+2023-12-23 10:45:04.963 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Login - -
+2023-12-23 10:45:04.963 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:45:04.964 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Login - - - 204 - - 0.7041ms
+2023-12-23 10:45:04.965 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/Account/Login application/json 93
+2023-12-23 10:45:04.966 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:45:04.966 +05:30 [INF] Executing endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Login (FoodOrderingSystemAPI)'
+2023-12-23 10:45:04.972 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FoodOrderingSystemAPI.Models.Login) on controller FoodOrderingSystemAPI.Controllers.AccountController (FoodOrderingSystemAPI).
+2023-12-23 10:45:06.047 +05:30 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[id], [c].[foodItemId], [c].[imageUrl], [c].[name], [c].[price], [c].[quantity], [c].[totalAmount], [c].[userId]
+FROM [Carts] AS [c]
+2023-12-23 10:45:06.153 +05:30 [INF] Executed DbCommand (159ms) [Parameters=[@__email_0='?' (Size = 50), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[userId], [s].[confirmPassword], [s].[email], [s].[isAdmin], [s].[name], [s].[password], [s].[rememberMe]
+FROM [SignupLogin] AS [s]
+WHERE [s].[email] = @__email_0 AND [s].[password] = @__password_1
+2023-12-23 10:45:06.259 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FoodOrderingSystemAPI.Models.Cart, FoodOrderingSystemAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-23 10:45:06.317 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FoodOrderingSystemAPI.Models.SignupLogin, FoodOrderingSystemAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-23 10:45:06.339 +05:30 [INF] Executed action OrderCartServiceAPI.Controllers.CartController.GetCartItems (FoodOrderingSystemAPI) in 6876.2851ms
+2023-12-23 10:45:06.339 +05:30 [INF] Executed endpoint 'OrderCartServiceAPI.Controllers.CartController.GetCartItems (FoodOrderingSystemAPI)'
+2023-12-23 10:45:06.348 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/api/cart - - - 200 - application/json;+charset=utf-8 7639.0832ms
+2023-12-23 10:45:06.352 +05:30 [INF] Executed action FoodOrderingSystemAPI.Controllers.AccountController.Login (FoodOrderingSystemAPI) in 1380.5993ms
+2023-12-23 10:45:06.354 +05:30 [INF] Executed endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Login (FoodOrderingSystemAPI)'
+2023-12-23 10:45:06.356 +05:30 [INF] Session started; Key:f580c6dc-e4ea-1575-6e1a-a0b0b94c1d1a, Id:63f4a774-cbbc-d2f6-ebc6-7770e1af2872
+2023-12-23 10:45:06.361 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/Account/Login application/json 93 - 200 - application/json;+charset=utf-8 1395.7349ms
+2023-12-23 10:45:06.366 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/logs - -
+2023-12-23 10:45:06.367 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:45:06.367 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/logs - - - 204 - - 0.9559ms
+2023-12-23 10:45:06.369 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/logs application/json 72
+2023-12-23 10:45:06.369 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:45:06.370 +05:30 [INF] Executing endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-23 10:45:06.370 +05:30 [INF] Route matched with {action = "LogMessage", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogMessage(FoodOrderingSystemAPI.Models.LogModel) on controller LogsController (FoodOrderingSystemAPI).
+2023-12-23 10:45:06.371 +05:30 [INF] LogMessage: Login successful!, Severity: Information
+2023-12-23 10:45:06.373 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-23 10:45:06.373 +05:30 [INF] Executed action LogsController.LogMessage (FoodOrderingSystemAPI) in 3.0707ms
+2023-12-23 10:45:06.373 +05:30 [INF] Executed endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-23 10:45:06.373 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/logs application/json 72 - 200 0 - 3.9564ms
+2023-12-23 10:46:48.100 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Signup - -
+2023-12-23 10:46:48.100 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:46:48.102 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Signup - - - 204 - - 2.5788ms
+2023-12-23 10:46:48.104 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/Account/Signup application/json 156
+2023-12-23 10:46:48.104 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:46:48.104 +05:30 [INF] Executing endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Signup (FoodOrderingSystemAPI)'
+2023-12-23 10:46:48.105 +05:30 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(FoodOrderingSystemAPI.Models.SignupLogin) on controller FoodOrderingSystemAPI.Controllers.AccountController (FoodOrderingSystemAPI).
+2023-12-23 10:46:48.109 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-23 10:46:48.109 +05:30 [INF] Executed action FoodOrderingSystemAPI.Controllers.AccountController.Signup (FoodOrderingSystemAPI) in 4.8521ms
+2023-12-23 10:46:48.109 +05:30 [INF] Executed endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Signup (FoodOrderingSystemAPI)'
+2023-12-23 10:46:48.110 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/Account/Signup application/json 156 - 400 - application/problem+json;+charset=utf-8 5.5627ms
+2023-12-23 10:46:48.115 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/logs - -
+2023-12-23 10:46:48.115 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:46:48.116 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/logs - - - 204 - - 0.4640ms
+2023-12-23 10:46:48.119 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/logs application/json 677
+2023-12-23 10:46:48.120 +05:30 [INF] CORS policy execution successful.
+2023-12-23 10:46:48.120 +05:30 [INF] Executing endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-23 10:46:48.120 +05:30 [INF] Route matched with {action = "LogMessage", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogMessage(FoodOrderingSystemAPI.Models.LogModel) on controller LogsController (FoodOrderingSystemAPI).
+2023-12-23 10:46:48.122 +05:30 [ERR] LogMessage: Signup failed. Please try again., Severity: Error
+Error: {"headers":{"normalizedNames":{},"lazyUpdate":null},"status":400,"statusText":"Bad Request","url":"http://localhost:5038/api/Account/Signup","ok":false,"name":"HttpErrorResponse","message":"Http failure response for http://localhost:5038/api/Account/Signup: 400 Bad Request","error":{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-5bba51cf931c25448c6eae6793b4fcf8-0203731e75ec84e6-00","errors":{"confirmPassword":["Could not find a property named Password."]}}}
+2023-12-23 10:46:48.122 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-23 10:46:48.122 +05:30 [INF] Executed action LogsController.LogMessage (FoodOrderingSystemAPI) in 2.0083ms
+2023-12-23 10:46:48.122 +05:30 [INF] Executed endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-23 10:46:48.122 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/logs application/json 677 - 200 0 - 3.6548ms
+2023-12-23 10:48:27.785 +05:30 [INF] Application is shutting down...

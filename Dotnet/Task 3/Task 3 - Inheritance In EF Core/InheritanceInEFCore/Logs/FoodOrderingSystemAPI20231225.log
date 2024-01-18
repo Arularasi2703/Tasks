@@ -1,0 +1,258 @@
+2023-12-25 12:14:38.314 +05:30 [INF] User profile is available. Using 'C:\Users\Arularasi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-25 12:14:38.681 +05:30 [INF] Now listening on: http://localhost:5038
+2023-12-25 12:14:38.693 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-25 12:14:38.696 +05:30 [INF] Hosting environment: Development
+2023-12-25 12:14:38.696 +05:30 [INF] Content root path: C:\Users\Arularasi\Google Drive\MY FILES\Aspire Systems\Angular\Code\Application\Asp.Net Web API\FoodOrderingSystemAPI
+2023-12-25 12:14:41.799 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/index.html - -
+2023-12-25 12:14:41.972 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/index.html - - - 200 - text/html;charset=utf-8 177.8686ms
+2023-12-25 12:14:42.155 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 12:14:42.158 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 2.4292ms
+2023-12-25 12:14:45.113 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - -
+2023-12-25 12:14:45.381 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 268.1988ms
+2023-12-25 12:16:30.178 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/api/Order/OrderHistory?userId=1 - -
+2023-12-25 12:16:30.322 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-12-25 12:16:30.874 +05:30 [INF] Executing endpoint 'FoodOrderingSystemAPI.Controllers.OrderController.GetOrderHistory (FoodOrderingSystemAPI)'
+2023-12-25 12:16:31.072 +05:30 [INF] Route matched with {action = "GetOrderHistory", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderHistory(Int32) on controller FoodOrderingSystemAPI.Controllers.OrderController (FoodOrderingSystemAPI).
+2023-12-25 12:16:38.657 +05:30 [INF] Executed DbCommand (508ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[id] AS [orderId], [i].[dateOfInvoice] AS [orderDate], [o].[orderStatus], [f].[name] AS [foodItemName], [f].[description] AS [foodItemDescription], [f].[imageUrl] AS [foodItemImageUrl], [o].[unitPrice] AS [foodItemPrice], [o].[quantity] AS [foodItemQty], [o].[orderBill] AS [totalAmount], [i].[id] AS [invoiceId], [i].[transactionId]
+FROM [orders] AS [o]
+INNER JOIN [invoiceModel] AS [i] ON [o].[invoiceId] = [i].[id]
+INNER JOIN [FoodItems] AS [f] ON [o].[foodItemId] = [f].[id]
+WHERE [i].[userId] = @__userId_0
+2023-12-25 12:16:38.843 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'AccountAPI.Data.FoodAppDbContext'.
+System.InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Byte[]'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Byte[]'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-12-25 12:16:38.938 +05:30 [ERR] An error occurred while retrieving order history.
+System.InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Byte[]'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodOrderingSystemAPI.Repositories.OrderRepository.GetOrdersByUserIdAsync(Int32 userId) in C:\Users\Arularasi\Google Drive\MY FILES\Aspire Systems\Angular\Code\Application\Asp.Net Web API\FoodOrderingSystemAPI\Data\Repositories\OrderRepository.cs:line 90
+   at FoodOrderingSystemAPI.Controllers.OrderController.GetOrderHistory(Int32 userId) in C:\Users\Arularasi\Google Drive\MY FILES\Aspire Systems\Angular\Code\Application\Asp.Net Web API\FoodOrderingSystemAPI\Controllers\OrderController.cs:line 140
+2023-12-25 12:16:38.966 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-12-25 12:16:38.989 +05:30 [INF] Executed action FoodOrderingSystemAPI.Controllers.OrderController.GetOrderHistory (FoodOrderingSystemAPI) in 7904.8912ms
+2023-12-25 12:16:38.991 +05:30 [INF] Executed endpoint 'FoodOrderingSystemAPI.Controllers.OrderController.GetOrderHistory (FoodOrderingSystemAPI)'
+2023-12-25 12:16:39.017 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/api/Order/OrderHistory?userId=1 - - - 500 - text/plain;+charset=utf-8 8839.6957ms
+2023-12-25 12:21:32.278 +05:30 [INF] Executed DbCommand (3,441ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [FoodAppDB];
+2023-12-25 12:21:32.984 +05:30 [INF] Executed DbCommand (666ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [FoodAppDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-12-25 12:21:33.048 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-25 12:21:33.302 +05:30 [INF] Executed DbCommand (176ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-12-25 12:21:33.304 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-25 12:21:33.398 +05:30 [INF] Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-12-25 12:21:33.447 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-12-25 12:21:33.502 +05:30 [INF] Applying migration '20231225065105_FoodOrderingSystemAPI'.
+2023-12-25 12:21:33.634 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [id] int NOT NULL IDENTITY,
+    [name] nvarchar(max) NOT NULL,
+    [imageUrl] nvarchar(max) NOT NULL,
+    [price] real NOT NULL,
+    [quantity] int NOT NULL,
+    [totalAmount] real NOT NULL,
+    [foodItemId] int NOT NULL,
+    [userId] int NOT NULL,
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([id])
+);
+2023-12-25 12:21:33.678 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [CheckoutDetails] (
+    [id] int NOT NULL IDENTITY,
+    [name] nvarchar(max) NOT NULL,
+    [email] nvarchar(max) NOT NULL,
+    [mobileNumber] nvarchar(max) NOT NULL,
+    [address] nvarchar(max) NOT NULL,
+    [pincode] nvarchar(max) NOT NULL,
+    [userId] int NOT NULL,
+    CONSTRAINT [PK_CheckoutDetails] PRIMARY KEY ([id])
+);
+2023-12-25 12:21:33.718 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FoodCategories] (
+    [name] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_FoodCategories] PRIMARY KEY ([name])
+);
+2023-12-25 12:21:33.784 +05:30 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SignupLogin] (
+    [userId] int NOT NULL IDENTITY,
+    [name] nvarchar(50) NOT NULL,
+    [email] nvarchar(50) NOT NULL,
+    [password] nvarchar(max) NOT NULL,
+    [confirmPassword] nvarchar(50) NOT NULL,
+    [isAdmin] bit NOT NULL,
+    [rememberMe] bit NOT NULL,
+    CONSTRAINT [PK_SignupLogin] PRIMARY KEY ([userId])
+);
+2023-12-25 12:21:33.942 +05:30 [INF] Executed DbCommand (157ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FoodItems] (
+    [id] int NOT NULL IDENTITY,
+    [name] nvarchar(max) NOT NULL,
+    [price] int NOT NULL,
+    [description] nvarchar(max) NOT NULL,
+    [imageUrl] varbinary(max) NOT NULL,
+    [category] nvarchar(max) NOT NULL,
+    [isVegan] bit NOT NULL,
+    [calories] real NOT NULL,
+    [FoodCategoryname] nvarchar(450) NULL,
+    CONSTRAINT [PK_FoodItems] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_FoodItems_FoodCategories_FoodCategoryname] FOREIGN KEY ([FoodCategoryname]) REFERENCES [FoodCategories] ([name])
+);
+2023-12-25 12:21:34.089 +05:30 [INF] Executed DbCommand (147ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [invoiceModel] (
+    [id] int NOT NULL IDENTITY,
+    [dateOfInvoice] datetime2 NULL,
+    [Total_Bill] real NOT NULL,
+    [transactionId] nvarchar(max) NULL,
+    [orderId] nvarchar(max) NULL,
+    [userId] int NOT NULL,
+    CONSTRAINT [PK_invoiceModel] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_invoiceModel_SignupLogin_userId] FOREIGN KEY ([userId]) REFERENCES [SignupLogin] ([userId]) ON DELETE CASCADE
+);
+2023-12-25 12:21:34.104 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [otpModels] (
+    [id] int NOT NULL IDENTITY,
+    [email] nvarchar(max) NOT NULL,
+    [otpValue] nvarchar(max) NOT NULL,
+    [isVerified] bit NOT NULL,
+    [userId] int NOT NULL,
+    CONSTRAINT [PK_otpModels] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_otpModels_SignupLogin_userId] FOREIGN KEY ([userId]) REFERENCES [SignupLogin] ([userId]) ON DELETE CASCADE
+);
+2023-12-25 12:21:34.306 +05:30 [INF] Executed DbCommand (202ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserProfile] (
+    [profileId] int NOT NULL IDENTITY,
+    [name] nvarchar(max) NOT NULL,
+    [email] nvarchar(max) NOT NULL,
+    [mobileNumber] nvarchar(max) NULL,
+    [profilePicture] varbinary(max) NULL,
+    [address] nvarchar(max) NULL,
+    [pincode] int NULL,
+    [userId] int NOT NULL,
+    CONSTRAINT [PK_UserProfile] PRIMARY KEY ([profileId]),
+    CONSTRAINT [FK_UserProfile_SignupLogin_userId] FOREIGN KEY ([userId]) REFERENCES [SignupLogin] ([userId]) ON DELETE CASCADE
+);
+2023-12-25 12:21:34.394 +05:30 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [orders] (
+    [id] int NOT NULL IDENTITY,
+    [quantity] int NOT NULL,
+    [unitPrice] int NOT NULL,
+    [orderBill] real NOT NULL,
+    [orderDate] datetime2 NULL,
+    [orderStatus] nvarchar(max) NULL,
+    [foodItemId] int NOT NULL,
+    [invoiceId] int NOT NULL,
+    CONSTRAINT [PK_orders] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_orders_FoodItems_foodItemId] FOREIGN KEY ([foodItemId]) REFERENCES [FoodItems] ([id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_orders_invoiceModel_invoiceId] FOREIGN KEY ([invoiceId]) REFERENCES [invoiceModel] ([id]) ON DELETE CASCADE
+);
+2023-12-25 12:21:34.496 +05:30 [INF] Executed DbCommand (102ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_FoodItems_FoodCategoryname] ON [FoodItems] ([FoodCategoryname]);
+2023-12-25 12:21:34.519 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_invoiceModel_userId] ON [invoiceModel] ([userId]);
+2023-12-25 12:21:34.689 +05:30 [INF] Executed DbCommand (169ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_orders_foodItemId] ON [orders] ([foodItemId]);
+2023-12-25 12:21:34.893 +05:30 [INF] Executed DbCommand (203ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_orders_invoiceId] ON [orders] ([invoiceId]);
+2023-12-25 12:21:34.895 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_otpModels_userId] ON [otpModels] ([userId]);
+2023-12-25 12:21:34.928 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserProfile_userId] ON [UserProfile] ([userId]);
+2023-12-25 12:21:35.097 +05:30 [INF] Executed DbCommand (169ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231225065105_FoodOrderingSystemAPI', N'7.0.7');
+2023-12-25 13:41:49.735 +05:30 [INF] Executed DbCommand (2,554ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [MenuDB];
+2023-12-25 13:41:50.824 +05:30 [INF] Executed DbCommand (977ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [MenuDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-12-25 13:41:50.876 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-25 13:41:51.216 +05:30 [INF] Executed DbCommand (173ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-12-25 13:41:51.219 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-25 13:41:51.260 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-12-25 13:41:51.270 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-12-25 13:41:51.315 +05:30 [INF] Applying migration '20231225081124_FoodMenuAPI'.
+2023-12-25 13:41:51.386 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FoodCategories] (
+    [name] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_FoodCategories] PRIMARY KEY ([name])
+);
+2023-12-25 13:41:51.403 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FoodItems] (
+    [id] int NOT NULL IDENTITY,
+    [name] nvarchar(max) NOT NULL,
+    [price] int NOT NULL,
+    [description] nvarchar(max) NOT NULL,
+    [imageUrl] varbinary(max) NOT NULL,
+    [category] nvarchar(max) NOT NULL,
+    [isVegan] bit NOT NULL,
+    [calories] real NOT NULL,
+    [IsInGallery] bit NOT NULL,
+    [FoodCategoryname] nvarchar(450) NULL,
+    CONSTRAINT [PK_FoodItems] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_FoodItems_FoodCategories_FoodCategoryname] FOREIGN KEY ([FoodCategoryname]) REFERENCES [FoodCategories] ([name])
+);
+2023-12-25 13:41:51.405 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_FoodItems_FoodCategoryname] ON [FoodItems] ([FoodCategoryname]);
+2023-12-25 13:41:51.425 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231225081124_FoodMenuAPI', N'7.0.4');
+2023-12-25 14:20:38.441 +05:30 [INF] Now listening on: https://localhost:7249
+2023-12-25 14:20:38.493 +05:30 [INF] Now listening on: http://localhost:5189
+2023-12-25 14:20:38.500 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-25 14:20:38.501 +05:30 [INF] Hosting environment: Development
+2023-12-25 14:20:38.501 +05:30 [INF] Content root path: C:\Users\Arularasi\Google Drive\MY FILES\Aspire Systems\Angular\Code\Application\Asp.Net Web API\Image Upload\FoodMenuApi\
+2023-12-25 14:20:40.761 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7249/swagger/index.html - -
+2023-12-25 14:20:41.695 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7249/swagger/index.html - - - 200 - text/html;charset=utf-8 940.3759ms
+2023-12-25 14:20:41.722 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7249/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 14:20:41.726 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7249/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 4.1525ms
+2023-12-25 14:20:42.416 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7249/swagger/v1/swagger.json - -
+2023-12-25 14:20:42.647 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7249/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 230.9239ms
+2023-12-25 14:25:12.657 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7249/api/Menu multipart/form-data;+boundary=----WebKitFormBoundaryA0ByICFyUnW0J2G1 33434
+2023-12-25 14:25:12.813 +05:30 [INF] CORS policy execution successful.
+2023-12-25 14:25:14.370 +05:30 [INF] Executing endpoint 'FoodMenuApi.Controllers.MenuController.AddFoodItemAsync (FoodMenuApi)'
+2023-12-25 14:25:14.588 +05:30 [INF] Route matched with {action = "AddFoodItem", controller = "Menu"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddFoodItemAsync(FoodMenuApi.Models.FoodItemRequest) on controller FoodMenuApi.Controllers.MenuController (FoodMenuApi).
+2023-12-25 14:25:20.778 +05:30 [INF] Executing OkObjectResult, writing value of type 'FoodMenuApi.Models.FoodItem'.
+2023-12-25 14:25:20.890 +05:30 [INF] Executed action FoodMenuApi.Controllers.MenuController.AddFoodItemAsync (FoodMenuApi) in 6285.1367ms
+2023-12-25 14:25:20.893 +05:30 [INF] Executed endpoint 'FoodMenuApi.Controllers.MenuController.AddFoodItemAsync (FoodMenuApi)'
+2023-12-25 14:25:20.900 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7249/api/Menu multipart/form-data;+boundary=----WebKitFormBoundaryA0ByICFyUnW0J2G1 33434 - 200 - application/json;+charset=utf-8 8242.4860ms
+2023-12-25 14:52:00.981 +05:30 [INF] Application is shutting down...

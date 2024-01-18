@@ -1,0 +1,18 @@
+2023-12-25 23:54:34.399 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-25 23:54:34.515 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-12-25 23:54:34.520 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-25 23:54:34.522 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-12-25 23:54:34.636 +05:30 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-12-25 23:54:34.706 +05:30 [INF] Applying migration '20231225182409_FoodMenuAPI'.
+2023-12-25 23:54:35.328 +05:30 [ERR] Failed executing DbCommand (285ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FoodCategories] (
+    [name] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_FoodCategories] PRIMARY KEY ([name])
+);

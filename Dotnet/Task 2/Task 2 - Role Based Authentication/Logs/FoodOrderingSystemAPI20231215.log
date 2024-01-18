@@ -1,0 +1,158 @@
+2023-12-15 21:54:19.504 +05:30 [INF] User profile is available. Using 'C:\Users\Arularasi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-15 21:54:21.310 +05:30 [INF] Now listening on: http://localhost:5038
+2023-12-15 21:54:21.320 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-15 21:54:21.320 +05:30 [INF] Hosting environment: Development
+2023-12-15 21:54:21.321 +05:30 [INF] Content root path: C:\Users\Arularasi\Google Drive\MY FILES\Aspire Systems\Angular\Code\Application\Asp.Net Web API\FoodOrderingSystemAPI
+2023-12-15 21:54:24.886 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/index.html - -
+2023-12-15 21:54:26.110 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/index.html - - - 200 - text/html;charset=utf-8 1325.9925ms
+2023-12-15 21:54:26.213 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/_framework/aspnetcore-browser-refresh.js - -
+2023-12-15 21:54:26.219 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 6.3907ms
+2023-12-15 21:54:26.915 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - -
+2023-12-15 21:54:27.676 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 760.7480ms
+2023-12-15 22:06:15.252 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/cart - -
+2023-12-15 22:06:15.700 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-12-15 22:06:16.419 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:06:16.452 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/cart - - - 204 - - 1215.7944ms
+2023-12-15 22:06:16.519 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/api/cart - -
+2023-12-15 22:06:18.091 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:06:18.101 +05:30 [INF] Executing endpoint 'OrderCartServiceAPI.Controllers.CartController.GetCartItems (FoodOrderingSystemAPI)'
+2023-12-15 22:06:18.378 +05:30 [INF] Route matched with {action = "GetCartItems", controller = "Cart"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[FoodOrderingSystemAPI.Models.Cart]] GetCartItems() on controller OrderCartServiceAPI.Controllers.CartController (FoodOrderingSystemAPI).
+2023-12-15 22:06:28.855 +05:30 [INF] Executed DbCommand (331ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[id], [c].[foodItemId], [c].[imageUrl], [c].[name], [c].[price], [c].[quantity], [c].[totalAmount], [c].[userId]
+FROM [Carts] AS [c]
+2023-12-15 22:06:29.141 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FoodOrderingSystemAPI.Models.Cart, FoodOrderingSystemAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-15 22:06:29.216 +05:30 [INF] Executed action OrderCartServiceAPI.Controllers.CartController.GetCartItems (FoodOrderingSystemAPI) in 10809.1973ms
+2023-12-15 22:06:29.216 +05:30 [INF] Executed endpoint 'OrderCartServiceAPI.Controllers.CartController.GetCartItems (FoodOrderingSystemAPI)'
+2023-12-15 22:06:29.247 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/api/cart - - - 200 - application/json;+charset=utf-8 12727.6523ms
+2023-12-15 22:15:21.415 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/logs - -
+2023-12-15 22:15:21.480 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:15:21.481 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/logs - - - 204 - - 65.8709ms
+2023-12-15 22:15:21.484 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/logs application/json 87
+2023-12-15 22:15:21.485 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:15:21.485 +05:30 [INF] Executing endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:15:21.499 +05:30 [INF] Route matched with {action = "LogMessage", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogMessage(FoodOrderingSystemAPI.Models.LogModel) on controller LogsController (FoodOrderingSystemAPI).
+2023-12-15 22:15:21.873 +05:30 [INF] LogMessage: Fetched menu items successfully., Severity: Information
+2023-12-15 22:15:21.910 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-15 22:15:21.911 +05:30 [INF] Executed action LogsController.LogMessage (FoodOrderingSystemAPI) in 412.1788ms
+2023-12-15 22:15:21.911 +05:30 [INF] Executed endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:15:21.912 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/logs application/json 87 - 200 0 - 428.6777ms
+2023-12-15 22:22:16.662 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Login - -
+2023-12-15 22:22:16.663 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:22:16.663 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Login - - - 204 - - 1.2529ms
+2023-12-15 22:22:16.665 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/Account/Login application/json 93
+2023-12-15 22:22:16.667 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:22:16.667 +05:30 [INF] Executing endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Login (FoodOrderingSystemAPI)'
+2023-12-15 22:22:16.828 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FoodOrderingSystemAPI.Models.Login) on controller FoodOrderingSystemAPI.Controllers.AccountController (FoodOrderingSystemAPI).
+2023-12-15 22:22:19.844 +05:30 [INF] Executed DbCommand (677ms) [Parameters=[@__email_0='?' (Size = 50), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[userId], [s].[confirmPassword], [s].[email], [s].[isAdmin], [s].[name], [s].[password], [s].[rememberMe]
+FROM [SignupLogin] AS [s]
+WHERE [s].[email] = @__email_0 AND [s].[password] = @__password_1
+2023-12-15 22:22:19.995 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FoodOrderingSystemAPI.Models.SignupLogin, FoodOrderingSystemAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-15 22:22:20.052 +05:30 [INF] Executed action FoodOrderingSystemAPI.Controllers.AccountController.Login (FoodOrderingSystemAPI) in 3224.1952ms
+2023-12-15 22:22:20.053 +05:30 [INF] Executed endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Login (FoodOrderingSystemAPI)'
+2023-12-15 22:22:20.055 +05:30 [INF] Session started; Key:144b3b50-753b-c855-db09-45f8c96b86a1, Id:a799bb58-81f0-063f-fd55-25491ae78580
+2023-12-15 22:22:20.061 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/Account/Login application/json 93 - 200 - application/json;+charset=utf-8 3396.3460ms
+2023-12-15 22:22:20.078 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/logs - -
+2023-12-15 22:22:20.079 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:22:20.079 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/logs - - - 204 - - 0.7168ms
+2023-12-15 22:22:20.081 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/logs application/json 72
+2023-12-15 22:22:20.081 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:22:20.081 +05:30 [INF] Executing endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:22:20.082 +05:30 [INF] Route matched with {action = "LogMessage", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogMessage(FoodOrderingSystemAPI.Models.LogModel) on controller LogsController (FoodOrderingSystemAPI).
+2023-12-15 22:22:20.083 +05:30 [INF] LogMessage: Login successful!, Severity: Information
+2023-12-15 22:22:20.085 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-15 22:22:20.085 +05:30 [INF] Executed action LogsController.LogMessage (FoodOrderingSystemAPI) in 3.0651ms
+2023-12-15 22:22:20.085 +05:30 [INF] Executed endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:22:20.085 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/logs application/json 72 - 200 0 - 4.1091ms
+2023-12-15 22:28:08.964 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/cart - -
+2023-12-15 22:28:08.965 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:28:08.965 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/cart - - - 204 - - 0.8091ms
+2023-12-15 22:28:10.675 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/api/cart - -
+2023-12-15 22:28:10.677 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:28:10.677 +05:30 [INF] Executing endpoint 'OrderCartServiceAPI.Controllers.CartController.GetCartItems (FoodOrderingSystemAPI)'
+2023-12-15 22:28:10.677 +05:30 [INF] Route matched with {action = "GetCartItems", controller = "Cart"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[FoodOrderingSystemAPI.Models.Cart]] GetCartItems() on controller OrderCartServiceAPI.Controllers.CartController (FoodOrderingSystemAPI).
+2023-12-15 22:28:11.424 +05:30 [INF] Executed DbCommand (648ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[id], [c].[foodItemId], [c].[imageUrl], [c].[name], [c].[price], [c].[quantity], [c].[totalAmount], [c].[userId]
+FROM [Carts] AS [c]
+2023-12-15 22:28:12.627 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FoodOrderingSystemAPI.Models.Cart, FoodOrderingSystemAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-15 22:28:12.846 +05:30 [INF] Executed action OrderCartServiceAPI.Controllers.CartController.GetCartItems (FoodOrderingSystemAPI) in 2168.7708ms
+2023-12-15 22:28:12.846 +05:30 [INF] Executed endpoint 'OrderCartServiceAPI.Controllers.CartController.GetCartItems (FoodOrderingSystemAPI)'
+2023-12-15 22:28:12.847 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/api/cart - - - 200 - application/json;+charset=utf-8 2172.0575ms
+2023-12-15 22:29:54.926 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Login - -
+2023-12-15 22:29:54.927 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:29:54.927 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/Account/Login - - - 204 - - 0.7610ms
+2023-12-15 22:29:54.928 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/Account/Login application/json 93
+2023-12-15 22:29:54.929 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:29:54.929 +05:30 [INF] Executing endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Login (FoodOrderingSystemAPI)'
+2023-12-15 22:29:54.929 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FoodOrderingSystemAPI.Models.Login) on controller FoodOrderingSystemAPI.Controllers.AccountController (FoodOrderingSystemAPI).
+2023-12-15 22:29:55.237 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__email_0='?' (Size = 50), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[userId], [s].[confirmPassword], [s].[email], [s].[isAdmin], [s].[name], [s].[password], [s].[rememberMe]
+FROM [SignupLogin] AS [s]
+WHERE [s].[email] = @__email_0 AND [s].[password] = @__password_1
+2023-12-15 22:29:55.295 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FoodOrderingSystemAPI.Models.SignupLogin, FoodOrderingSystemAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-15 22:29:55.296 +05:30 [INF] Executed action FoodOrderingSystemAPI.Controllers.AccountController.Login (FoodOrderingSystemAPI) in 366.9158ms
+2023-12-15 22:29:55.296 +05:30 [INF] Executed endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.Login (FoodOrderingSystemAPI)'
+2023-12-15 22:29:55.296 +05:30 [INF] Session started; Key:89702860-e225-40c1-e6f6-70c463d15681, Id:27146c91-96e9-2bbc-3cbc-b0ac7cad7baa
+2023-12-15 22:29:55.298 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/Account/Login application/json 93 - 200 - application/json;+charset=utf-8 369.2939ms
+2023-12-15 22:29:55.303 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/logs - -
+2023-12-15 22:29:55.304 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:29:55.304 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/logs - - - 204 - - 0.5823ms
+2023-12-15 22:29:55.305 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/logs application/json 72
+2023-12-15 22:29:55.306 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:29:55.306 +05:30 [INF] Executing endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:29:55.306 +05:30 [INF] Route matched with {action = "LogMessage", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogMessage(FoodOrderingSystemAPI.Models.LogModel) on controller LogsController (FoodOrderingSystemAPI).
+2023-12-15 22:29:55.308 +05:30 [INF] LogMessage: Login successful!, Severity: Information
+2023-12-15 22:29:55.308 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-15 22:29:55.308 +05:30 [INF] Executed action LogsController.LogMessage (FoodOrderingSystemAPI) in 2.141ms
+2023-12-15 22:29:55.308 +05:30 [INF] Executed endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:29:55.309 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/logs application/json 72 - 200 0 - 3.2616ms
+2023-12-15 22:29:57.109 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/api/Account/UserProfile/1 - -
+2023-12-15 22:29:57.112 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:29:57.112 +05:30 [INF] Executing endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.UserProfile (FoodOrderingSystemAPI)'
+2023-12-15 22:29:57.136 +05:30 [INF] Route matched with {action = "UserProfile", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserProfile(Int32) on controller FoodOrderingSystemAPI.Controllers.AccountController (FoodOrderingSystemAPI).
+2023-12-15 22:29:57.398 +05:30 [INF] Executed DbCommand (221ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[profileId], [u].[address], [u].[email], [u].[mobileNumber], [u].[name], [u].[pincode], [u].[profilePicture], [u].[userId]
+FROM [UserProfile] AS [u]
+WHERE [u].[userId] = @__userId_0
+2023-12-15 22:29:57.591 +05:30 [INF] Executing OkObjectResult, writing value of type 'FoodOrderingSystemAPI.Models.UserProfile'.
+2023-12-15 22:29:57.614 +05:30 [INF] Executed action FoodOrderingSystemAPI.Controllers.AccountController.UserProfile (FoodOrderingSystemAPI) in 477.7738ms
+2023-12-15 22:29:57.614 +05:30 [INF] Executed endpoint 'FoodOrderingSystemAPI.Controllers.AccountController.UserProfile (FoodOrderingSystemAPI)'
+2023-12-15 22:29:57.614 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/api/Account/UserProfile/1 - - - 200 - application/json;+charset=utf-8 505.4895ms
+2023-12-15 22:30:28.423 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5038/api/Order/OrderHistory?userId=1 - -
+2023-12-15 22:30:28.423 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:30:28.423 +05:30 [INF] Executing endpoint 'FoodOrderingSystemAPI.Controllers.OrderController.GetOrderHistory (FoodOrderingSystemAPI)'
+2023-12-15 22:30:28.429 +05:30 [INF] Route matched with {action = "GetOrderHistory", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderHistory(Int32) on controller FoodOrderingSystemAPI.Controllers.OrderController (FoodOrderingSystemAPI).
+2023-12-15 22:30:29.028 +05:30 [INF] Executed DbCommand (261ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[id] AS [orderId], [i].[dateOfInvoice] AS [orderDate], [o].[orderStatus], [f].[name] AS [foodItemName], [f].[description] AS [foodItemDescription], [f].[imageUrl] AS [foodItemImageUrl], [o].[unitPrice] AS [foodItemPrice], [o].[quantity] AS [foodItemQty], [o].[orderBill] AS [totalAmount], [i].[id] AS [invoiceId], [i].[transactionId]
+FROM [orders] AS [o]
+INNER JOIN [invoiceModel] AS [i] ON [o].[invoiceId] = [i].[id]
+INNER JOIN [FoodItems] AS [f] ON [o].[foodItemId] = [f].[id]
+WHERE [i].[userId] = @__userId_0
+2023-12-15 22:30:29.041 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FoodOrderingSystemAPI.Models.InvoiceDetails, FoodOrderingSystemAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-15 22:30:29.105 +05:30 [INF] Executed action FoodOrderingSystemAPI.Controllers.OrderController.GetOrderHistory (FoodOrderingSystemAPI) in 675.1169ms
+2023-12-15 22:30:29.105 +05:30 [INF] Executed endpoint 'FoodOrderingSystemAPI.Controllers.OrderController.GetOrderHistory (FoodOrderingSystemAPI)'
+2023-12-15 22:30:29.105 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5038/api/Order/OrderHistory?userId=1 - - - 200 - application/json;+charset=utf-8 682.2031ms
+2023-12-15 22:30:29.108 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/logs - -
+2023-12-15 22:30:29.108 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:30:29.111 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/logs - - - 204 - - 2.8062ms
+2023-12-15 22:30:29.114 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/logs application/json 90
+2023-12-15 22:30:29.115 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:30:29.115 +05:30 [INF] Executing endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:30:29.115 +05:30 [INF] Route matched with {action = "LogMessage", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogMessage(FoodOrderingSystemAPI.Models.LogModel) on controller LogsController (FoodOrderingSystemAPI).
+2023-12-15 22:30:29.116 +05:30 [INF] LogMessage: Successfully fetched order history., Severity: Information
+2023-12-15 22:30:29.116 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-15 22:30:29.116 +05:30 [INF] Executed action LogsController.LogMessage (FoodOrderingSystemAPI) in 0.7849ms
+2023-12-15 22:30:29.116 +05:30 [INF] Executed endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:30:29.117 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/logs application/json 90 - 200 0 - 2.2760ms
+2023-12-15 22:30:35.497 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5038/api/logs - -
+2023-12-15 22:30:35.497 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:30:35.498 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5038/api/logs - - - 204 - - 0.7336ms
+2023-12-15 22:30:35.501 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5038/api/logs application/json 87
+2023-12-15 22:30:35.501 +05:30 [INF] CORS policy execution successful.
+2023-12-15 22:30:35.501 +05:30 [INF] Executing endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:30:35.502 +05:30 [INF] Route matched with {action = "LogMessage", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogMessage(FoodOrderingSystemAPI.Models.LogModel) on controller LogsController (FoodOrderingSystemAPI).
+2023-12-15 22:30:35.503 +05:30 [INF] LogMessage: Fetched menu items successfully., Severity: Information
+2023-12-15 22:30:35.503 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-15 22:30:35.503 +05:30 [INF] Executed action LogsController.LogMessage (FoodOrderingSystemAPI) in 1.1924ms
+2023-12-15 22:30:35.503 +05:30 [INF] Executed endpoint 'LogsController.LogMessage (FoodOrderingSystemAPI)'
+2023-12-15 22:30:35.503 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5038/api/logs application/json 87 - 200 0 - 2.4137ms

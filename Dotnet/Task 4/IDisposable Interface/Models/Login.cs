@@ -15,5 +15,4 @@ namespace FoodOrderingSystemAPI.Models{
     public bool rememberMe { get; set; }
     public bool isAdmin{get;set;}
   }
-
 }
